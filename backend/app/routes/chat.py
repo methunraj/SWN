@@ -32,7 +32,7 @@ async def chat(
     try:
         context = {
             "conversation_id": request.conversation_id,
-            "provider": request.provider,
+            "provider": request.provider.value if request.provider else None,
             "model": request.model,
             "temperature": request.temperature,
             "top_p": request.top_p,
@@ -63,7 +63,10 @@ async def generate_stream(generator: AsyncGenerator[str, None]) -> AsyncGenerato
             yield f"data: {json.dumps({'content': chunk})}\n\n"
         yield "data: [DONE]\n\n"
     except Exception as e:
-        yield f"data: {json.dumps({'error': str(e)})}\n\n"
+        import traceback
+        error_detail = traceback.format_exc()
+        print(f"Streaming error: {error_detail}")
+        yield f"data: {json.dumps({'error': str(e), 'detail': error_detail})}\n\n"
 
 
 @router.post("/stream")
@@ -79,7 +82,7 @@ async def chat_stream(
     try:
         context = {
             "conversation_id": request.conversation_id,
-            "provider": request.provider,
+            "provider": request.provider.value if request.provider else None,
             "model": request.model,
             "temperature": request.temperature,
             "top_p": request.top_p,

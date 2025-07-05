@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     ollama_default_model: str = Field(default="llama2")
     
     # Llama.cpp Configuration
-    llamacpp_base_url: str = Field(default="http://localhost:8080")
+    llamacpp_base_url: str = Field(default="http://localhost:1234")
     llamacpp_model_path: str = Field(default="./models/")
     llamacpp_default_model: str = Field(default="mistral-7b-instruct")
     
@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     default_temperature: float = Field(default=0.7)
     default_top_p: float = Field(default=0.9)
     default_top_k: int = Field(default=40)
+    
+    # Default Model Configuration
+    default_provider: str = Field(default="llamacpp")
+    default_model: str = Field(default="qwen/qwen3-4b")
+    default_max_tokens: int = Field(default=2048)
     
     # Security
     secret_key: str = Field(default="your-secret-key-here")

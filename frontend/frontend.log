@@ -1,0 +1,322 @@
+
+> frontend@0.1.0 start
+> react-scripts start
+
+(node:78096) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:78096) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Failed to compile.
+
+Attempted import error: 'generateConversationTitle' is not exported from '../utils/helpers' (imported as 'generateConversationTitle').
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+ERROR in ./src/contexts/ChatContext.tsx 95:22-47
+export 'generateConversationTitle' (imported as 'generateConversationTitle') was not found in '../utils/helpers' (possible exports: classNames, copyToClipboard, createConversation, createMessage, debounce, generateId, scrollToBottom)
+
+webpack compiled with 1 error and 1 warning
+ERROR in src/components/Chat/Message.tsx:81:34
+TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+    79 |                   remarkPlugins={[remarkGfm]}
+    80 |                   components={{
+  > 81 |                     code({ node, inline, className, children, ...props }) {
+       |                                  ^^^^^^
+    82 |                       const match = /language-(\w+)/.exec(className || '');
+    83 |                       const language = match ? match[1] : '';
+    84 |                       
+
+ERROR in src/components/Chat/Message.tsx:97:31
+TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: SyntaxHighlighterProps): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+      Type 'CSSProperties' is not assignable to type '{ [key: string]: CSSProperties; }'.
+        Index signature for type 'string' is missing in type 'Properties<string | number, string & {}>'.
+  Overload 2 of 2, '(props: SyntaxHighlighterProps, context: any): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+     95 |                             </button>
+     96 |                             <SyntaxHighlighter
+  >  97 |                               style={vscDarkPlus}
+        |                               ^^^^^
+     98 |                               language={language}
+     99 |                               PreTag="div"
+    100 |                               {...props}
+
+ERROR in src/contexts/ChatContext.tsx:5:45
+TS2305: Module '"../utils/helpers"' has no exported member 'generateConversationTitle'.
+    3 | import { chatAPI } from '../services/api';
+    4 | import { storage } from '../services/storage';
+  > 5 | import { createMessage, createConversation, generateConversationTitle } from '../utils/helpers';
+      |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+    6 | import toast from 'react-hot-toast';
+    7 |
+    8 | interface ChatContextType extends ChatState {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+webpack compiled with 1 warning
+ERROR in src/components/Chat/Message.tsx:81:34
+TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+    79 |                   remarkPlugins={[remarkGfm]}
+    80 |                   components={{
+  > 81 |                     code({ node, inline, className, children, ...props }) {
+       |                                  ^^^^^^
+    82 |                       const match = /language-(\w+)/.exec(className || '');
+    83 |                       const language = match ? match[1] : '';
+    84 |                       
+
+ERROR in src/components/Chat/Message.tsx:97:31
+TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: SyntaxHighlighterProps): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+      Type 'CSSProperties' is not assignable to type '{ [key: string]: CSSProperties; }'.
+        Index signature for type 'string' is missing in type 'Properties<string | number, string & {}>'.
+  Overload 2 of 2, '(props: SyntaxHighlighterProps, context: any): SyntaxHighlighter', gave the following error.
+    Type 'CSSProperties | { [key: string]: CSSProperties; }' is not assignable to type '{ [key: string]: CSSProperties; } | undefined'.
+     95 |                             </button>
+     96 |                             <SyntaxHighlighter
+  >  97 |                               style={vscDarkPlus}
+        |                               ^^^^^
+     98 |                               language={language}
+     99 |                               PreTag="div"
+    100 |                               {...props}
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+webpack compiled with 1 warning
+ERROR in src/components/Chat/Message.tsx:81:34
+TS2339: Property 'inline' does not exist on type 'ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps'.
+    79 |                   remarkPlugins={[remarkGfm]}
+    80 |                   components={{
+  > 81 |                     code({ node, inline, className, children, ...props }) {
+       |                                  ^^^^^^
+    82 |                       const match = /language-(\w+)/.exec(className || '');
+    83 |                       const language = match ? match[1] : '';
+    84 |                       
+
+ERROR in src/components/Chat/Message.tsx:96:30
+TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: SyntaxHighlighterProps): SyntaxHighlighter', gave the following error.
+    Type '{ children: string; ref?: Ref<HTMLElement> | undefined; key?: Key | null | undefined; defaultChecked?: boolean | undefined; defaultValue?: string | number | readonly string[] | undefined; ... 275 more ...; PreTag: "div"; }' is not assignable to type 'IntrinsicClassAttributes<SyntaxHighlighter>'.
+      Types of property 'ref' are incompatible.
+        Type 'Ref<HTMLElement> | undefined' is not assignable to type 'Ref<SyntaxHighlighter> | undefined'.
+          Type '(instance: HTMLElement | null) => void | (() => VoidOrUndefinedOnly)' is not assignable to type 'Ref<SyntaxHighlighter> | undefined'.
+            Type '(instance: HTMLElement | null) => void | (() => VoidOrUndefinedOnly)' is not assignable to type '(instance: SyntaxHighlighter | null) => void | (() => VoidOrUndefinedOnly)'.
+              Types of parameters 'instance' and 'instance' are incompatible.
+                Type 'SyntaxHighlighter | null' is not assignable to type 'HTMLElement | null'.
+                  Type 'Component<SyntaxHighlighterProps, {}, any>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 284 more.
+  Overload 2 of 2, '(props: SyntaxHighlighterProps, context: any): SyntaxHighlighter', gave the following error.
+    Type '{ children: string; ref?: Ref<HTMLElement> | undefined; key?: Key | null | undefined; defaultChecked?: boolean | undefined; defaultValue?: string | number | readonly string[] | undefined; ... 275 more ...; PreTag: "div"; }' is not assignable to type 'IntrinsicClassAttributes<SyntaxHighlighter>'.
+      Types of property 'ref' are incompatible.
+        Type 'Ref<HTMLElement> | undefined' is not assignable to type 'Ref<SyntaxHighlighter> | undefined'.
+    94 |                               <ClipboardDocumentIcon className="w-4 h-4 text-text-secondary" />
+    95 |                             </button>
+  > 96 |                             <SyntaxHighlighter
+       |                              ^^^^^^^^^^^^^^^^^
+    97 |                               style={vscDarkPlus as any}
+    98 |                               language={language}
+    99 |                               PreTag="div"
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Layout/index.tsx
+  Line 8:11:  'currentConversationId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/ChatContext.tsx
+  Line 2:10:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/services/api.ts
+  Line 2:33:  'Provider' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/utils/formatters.ts
+  Line 28:21:  Unnecessary escape character: \[  no-useless-escape
+
+src/utils/helpers.ts
+  Line 63:21:  Unnecessary escape character: \[  no-useless-escape
+
+webpack compiled with 1 warning
+No issues found.

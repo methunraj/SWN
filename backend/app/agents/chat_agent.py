@@ -59,8 +59,15 @@ class ChatAgent(ConversationAgent):
         
         context = context or {}
         conversation_id = context.get("conversation_id") or str(uuid.uuid4())
-        provider = context.get("provider", Provider.OLLAMA)
-        model = context.get("model") or self._get_default_model(provider)
+        provider_str = context.get("provider", settings.default_provider)
+        
+        # Convert string provider to enum
+        if isinstance(provider_str, str):
+            provider = Provider(provider_str)
+        else:
+            provider = provider_str
+            
+        model = context.get("model") or settings.default_model
         system_prompt_id = context.get("system_prompt_id")
         
         # Get or create conversation

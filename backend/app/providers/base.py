@@ -56,4 +56,9 @@ class BaseProvider(ABC):
     
     def format_messages(self, messages: List[Message]) -> List[Dict[str, str]]:
         """Format messages for the provider's API"""
-        return [{"role": msg.role.value, "content": msg.content} for msg in messages]
+        formatted = []
+        for msg in messages:
+            # Handle both enum and string roles
+            role = msg.role.value if hasattr(msg.role, 'value') else msg.role
+            formatted.append({"role": role, "content": msg.content})
+        return formatted
